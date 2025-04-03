@@ -25,13 +25,13 @@ function dev_register_block_templates() {
 	register_block_template( 'demo-register-block-templates//single-book-template', [
 		'title'       => __( 'Single Book', 'demo-register-block-templates' ),
 		'description' => __( 'Displays a single book.', 'demo-register-block-templates' ),
+		'post_types'  => [ 'book','resource' ],
 		'content'     => dev_get_template_content( 'single-book.php' )
 	] );
 
 	register_block_template( 'demo-register-block-templates//book-canvas', [
 		'title'       => __( 'Book: Canvas', 'demo-register-block-templates' ),
 		'description' => __( 'An open template for use with single posts. Includes the Header, Post Content, and Footer.', 'demo-register-block-templates' ),
-		'post_types'  => [ 'resorces' ],
 		'content'     =>dev_get_template_content( 'book-canvas.php' )
 	] );
 
